@@ -6,13 +6,19 @@ class Top(list):
             raise ValueError('>10')
         else:
             super().__init__(b)
-    def append(self,x):
+            
+    def __add__(self, b):
+        if len(self)==10:
+            raise ValueError('>10')
+        
+    def append(self,b):
         if len(self)==10:
             raise ValueError('>10')
         else:
             super().append()
-
-h=Top([1,2,3,4,5,6,7,8,9,10]+[11])
+            
+           
+h=Top([1,2,3,4,5,6,7,8,9,10])+[1]
 print(h)
 
 
